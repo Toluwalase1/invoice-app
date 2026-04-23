@@ -2,7 +2,7 @@
 
 A fully functional, responsive invoice management application built with **React 19**, **TypeScript**, and **Vite**. Users can create, view, edit, and delete invoices with full form validation, theme switching, and data persistence via LocalStorage.
 
-> **Live Demo**: [Invoice App](https://github.com/Toluwalase1/invoice-app)
+> **Live Demo**: [Invoice App](https://invoice-app-peach-sigma.vercel.app/)
 
 ---
 
