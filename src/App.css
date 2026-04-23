@@ -1,0 +1,10 @@
+/* App.css — imports all style modules in dependency order */
+
+@import './styles/base.css';
+@import './styles/buttons.css';
+@import './styles/sidebar.css';
+@import './styles/invoices.css';
+@import './styles/details.css';
+@import './styles/form.css';
+@import './styles/modal.css';
+@import './styles/responsive.css';

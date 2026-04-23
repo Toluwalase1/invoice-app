@@ -1,0 +1,285 @@
+/* ═══════════════════════════════════════════════════════════
+   TABLET — 768px to 1024px
+   Sidebar → horizontal top bar
+   Tighter spacing between nav and content
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .side-nav {
+    height: 70px;
+    position: sticky;
+    top: 0;
+    border-radius: 0;
+    flex-direction: row;
+    padding-right: 18px;
+    /* border: 5px solid red; */
+  }
+
+  .logo-panel {
+    width: 92px;
+    height: 72px;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .theme-toggle {
+    margin: 0 0 0 auto;
+  }
+
+  .avatar {
+    width: auto;
+    border-top: 0;
+    border-left: 1px solid rgba(126, 136, 195, 0.3);
+    padding: 0 0 0 18px;
+    margin-left: 18px;
+  }
+
+ 
+  /* Drawer slides below the nav, no left offset */
+  .invoice-drawer {
+    margin-left: 0;
+    width: min(620px, 100vw);
+    border-radius: 0;
+    padding: 32px 32px 22px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE — below 768px
+   Compact spacing everywhere
+   Cards become 2-column grid
+   Details actions → fixed bottom bar
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 767px) {
+
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo-panel {
+    width: 80px;
+    height: 64px;
+  }
+
+  /* ── Invoice card → 2-column mobile layout ── */
+  .invoice-card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'id     client'
+      'date   status'
+      'total  status2';
+    row-gap: 10px;
+    padding: 20px 18px;
+  }
+
+  .invoice-id {
+    grid-area: id;
+  }
+
+  .invoice-client {
+    grid-area: client;
+    justify-self: end;
+  }
+
+  .invoice-date {
+    grid-area: date;
+  }
+
+  .invoice-total {
+    grid-area: total;
+    font-size: 1rem;
+  }
+
+  .status-pill {
+    grid-area: status;
+    justify-self: end;
+    grid-row: 2 / 4;
+    align-self: center;
+  }
+
+  /* Hide the chevron on mobile */
+  .go {
+    display: none;
+  }
+
+  /* ── Filter button: just "Filter" on mobile ── */
+  .filter-button .filter-full-text {
+    display: none;
+  }
+  .filter-button .filter-short-text {
+    display: inline;
+  }
+
+  /* ── New button: just "New" on mobile ── */
+  .new-button span:last-child {
+    display: none;
+  }
+  .new-button::after {
+    content: 'New';
+    color: #fff;
+  }
+
+  /* ── Detail view: hide desktop actions, show mobile bar ── */
+  .desktop-actions {
+    display: none;
+  }
+
+  .mobile-actions-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    padding: 16px 24px;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-actions-bar .btn {
+    flex: 1;
+    text-align: center;
+    padding: 14px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* Add bottom spacing only on details view to clear the fixed bar */
+  .details-view {
+    padding-bottom: 80px;
+  }
+
+  /* ── Detail card mobile ── */
+  .details-card {
+    padding: 24px 16px;
+  }
+
+  .details-head {
+    flex-direction: column;
+  }
+
+  .details-head address {
+    text-align: left;
+  }
+
+  .details-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .details-meta > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Show mobile items, hide desktop items */
+  .desktop-items-table {
+    display: none;
+  }
+
+  .mobile-items-table {
+    display: block;
+  }
+
+  .table-total strong {
+    font-size: 1.5rem;
+  }
+
+  /* ── Form drawer: full-width, compact padding ── */
+  .invoice-drawer {
+    width: 100%;
+    padding: 20px 24px 18px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Country goes full-width below City + Post Code */
+  .grid-3 > label:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .item-row {
+    grid-template-columns: 1fr 1fr 1fr 36px;
+  }
+
+  .item-row > label:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .line-total {
+    height: auto;
+    padding-top: 24px;
+  }
+
+  .drawer-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .drawer-footer .btn {
+    font-size: 0.82rem;
+    padding: 12px 14px;
+  }
+
+  .drawer-right-actions {
+    margin-left: auto;
+  }
+
+  /* ── Delete modal: mobile centered ── */
+  .delete-modal {
+    margin: 30vh auto 0;
+    padding: 28px 24px;
+  }
+
+  .modal-actions {
+    justify-content: center;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   VERY SMALL SCREENS (below 400px)
+   Tighten spacing further
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 400px) {
+
+
+  .invoice-card {
+    padding: 16px 14px;
+  }
+
+  .top-header {
+    gap: 12px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .new-button {
+    padding: 6px 12px 6px 6px;
+    gap: 8px;
+  }
+
+  .plus {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .invoice-drawer {
+    padding: 16px 16px 14px;
+  }
+}

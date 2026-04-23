@@ -1,0 +1,108 @@
+/* ─── Resets ─── */
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* ─── App Shell ─── */
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+
+}
+
+.app {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.content {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+/* ─── Typography ─── */
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: var(--text-strong);
+  margin-bottom: 6px;
+}
+
+h2,
+h3 {
+  color: var(--text-strong);
+}
+
+/* ─── Theme Variables ─── */
+
+.theme-dark {
+  --bg: #141625;
+  --surface: #1e2139;
+  --surface-soft: #252945;
+  --surface-strong: #0c0e16;
+  --text: #dfe3fa;
+  --text-muted: #888eb0;
+  --text-strong: #ffffff;
+  --line: #313552;
+  --accent: #7c5dfa;
+  --accent-2: #9277ff;
+  --danger: #ec5757;
+  --danger-soft: #ff9797;
+  --success: #33d69f;
+  --warning: #ff8f00;
+  --draft: #dfe3fa;
+  --overlay: rgba(12, 14, 22, 0.68);
+  --sidebar: #1e2139;
+}
+
+.theme-light {
+  --bg: #f8f8fb;
+  --surface: #ffffff;
+  --surface-soft: #f9fafe;
+  --surface-strong: #373b53;
+  --text: #7e88c3;
+  --text-muted: #888eb0;
+  --text-strong: #0c0e16;
+  --line: #dfe3fa;
+  --accent: #7c5dfa;
+  --accent-2: #9277ff;
+  --danger: #ec5757;
+  --danger-soft: #ff9797;
+  --success: #33d69f;
+  --warning: #ff8f00;
+  --draft: #373b53;
+  --overlay: rgba(0, 0, 0, 0.42);
+  --sidebar: #373b53;
+}
+
+/* ─── Focus Visible (Keyboard A11y) ─── */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent);
+}

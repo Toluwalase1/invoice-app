@@ -1,0 +1,26 @@
+/* ─── Modal Overlay ─── */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  z-index: 20;
+}
+
+/* ─── Delete Modal ─── */
+
+.delete-modal {
+  width: min(480px, calc(100vw - 32px));
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 34px 32px;
+  margin: 20vh auto 0;
+  display: grid;
+  gap: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}

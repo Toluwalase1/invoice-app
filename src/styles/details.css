@@ -1,0 +1,142 @@
+/* ─── Invoice Details ─── */
+
+.details-view {
+  display: grid;
+  gap: 22px;
+}
+
+.back-link {
+  border: 0;
+  background: transparent;
+  color: var(--text-strong);
+  justify-self: start;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.status-bar {
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.status-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ─── Details Card ─── */
+
+.details-card {
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 34px 32px;
+  display: grid;
+  gap: 30px;
+}
+
+.details-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.details-head address {
+  text-align: right;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.details-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.details-meta p {
+  margin-bottom: 6px;
+}
+
+.details-meta h3 {
+  margin-bottom: 12px;
+}
+
+/* ─── Items Table (Desktop / Tablet) ─── */
+
+.items-table {
+  background: var(--surface-soft);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-total {
+  background: var(--surface-strong);
+  color: #fff;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-total strong {
+  font-size: 2rem;
+}
+
+/* ─── Mobile Items Table (hidden by default) ─── */
+
+.mobile-items-table {
+  display: none;
+}
+
+.mobile-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.mobile-item-row + .mobile-item-row {
+  border-top: 1px solid var(--line);
+}
+
+.mobile-item-qty {
+  display: block;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.mobile-item-total {
+  color: var(--text-strong);
+  font-size: 1rem;
+}
+
+/* ─── Mobile Actions Bar (hidden by default) ─── */
+
+.mobile-actions-bar {
+  display: none;
+}

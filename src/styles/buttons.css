@@ -1,0 +1,54 @@
+/* ─── Buttons ─── */
+
+.btn {
+  border: 0;
+  border-radius: 24px;
+  padding: 14px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn.ghost {
+  background: var(--surface-soft);
+  color: var(--text);
+}
+
+.btn.ghost:hover {
+  background: var(--line);
+  opacity: 1;
+}
+
+.btn.muted {
+  background: #373b53;
+  color: #dfe3fa;
+}
+
+.btn.muted:hover {
+  background: #0c0e16;
+  opacity: 1;
+}
+
+.btn.danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn.danger:hover {
+  background: var(--danger-soft);
+  opacity: 1;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--accent-2);
+  opacity: 1;
+}

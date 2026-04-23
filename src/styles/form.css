@@ -1,0 +1,170 @@
+/* ─── Drawer Overlay ─── */
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  z-index: 20;
+}
+
+.invoice-drawer {
+  height: 100%;
+  width: min(720px, calc(100vw - 24px));
+  background: var(--bg);
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  padding: 40px 48px 30px;
+  margin-left: 80px;
+  overflow: auto;
+  display: grid;
+  gap: 24px;
+  outline: none;
+}
+
+.form-section {
+  display: grid;
+  gap: 14px;
+
+
+}
+
+.form-section h3 {
+  color: var(--accent);
+  font-size: 0.92rem;
+}
+
+/* ─── Form Inputs ─── */
+
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input,
+select {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text-strong);
+  border-radius: 4px;
+  padding: 14px 12px;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+input:hover,
+select:hover {
+  border-color: var(--accent-2);
+}
+
+/* ─── Validation Error States ─── */
+
+.input-error {
+  border-color: var(--danger) !important;
+}
+
+.error-message {
+  color: var(--danger);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.form-error-banner {
+  color: var(--danger);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.form-errors-summary {
+  color: var(--danger);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* ─── Form Grid Layouts ─── */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 2fr 0.65fr 0.95fr 0.95fr 36px;
+  gap: 10px;
+  align-items: end;
+}
+
+.line-total {
+  color: var(--text);
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+
+.remove-item {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+
+.remove-item:hover {
+  color: var(--danger);
+}
+
+.add-item {
+  border: 0;
+  background: var(--surface-soft);
+  color: var(--text);
+  border-radius: 24px;
+  padding: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.add-item:hover {
+  background: var(--line);
+  color: var(--text-strong);
+}
+
+/* ─── Drawer Footer ─── */
+
+.drawer-footer {
+  position: sticky;
+  bottom: -30px;
+  background: var(--bg);
+  padding: 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.drawer-right-actions {
+  display: flex;
+  gap: 10px;
+}

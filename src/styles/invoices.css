@@ -1,0 +1,217 @@
+/* ─── Invoice List Header ─── */
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+/* ─── Filter ─── */
+
+.filter-box {
+  position: relative;
+}
+
+.filter-button {
+  border: 0;
+  background: transparent;
+  color: var(--text-strong);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.filter-button:hover {
+  color: var(--accent);
+}
+
+/* Desktop/Tablet: show full text, hide short text */
+.filter-short-text {
+  display: none;
+}
+
+.caret {
+  color: var(--accent);
+}
+
+.filter-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  width: 170px;
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: grid;
+  gap: 10px;
+  z-index: 3;
+}
+
+.filter-menu label {
+  color: var(--text-strong);
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.filter-menu label:hover {
+  color: var(--accent);
+}
+
+/* ─── New Invoice Button ─── */
+
+.new-button {
+  border: 0;
+  border-radius: 24px;
+  padding: 8px 16px 8px 8px;
+  background: var(--accent);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.new-button:hover {
+  background: var(--accent-2);
+}
+
+.plus {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* ─── Invoice Cards ─── */
+
+.invoice-list {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.invoice-card {
+  width: 100%;
+  border: 1px solid transparent;
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 26px 24px;
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.4fr 1.1fr auto auto;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+.invoice-card:hover {
+  border-color: var(--accent);
+}
+
+.invoice-id,
+.invoice-total,
+.invoice-client {
+  color: var(--text-strong);
+}
+
+.invoice-id,
+.invoice-total {
+  font-weight: 700;
+}
+
+.go {
+  color: var(--accent);
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* ─── Status Pill ─── */
+
+.status-pill {
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-width: 106px;
+  font-weight: 700;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-paid {
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 12%, transparent);
+}
+
+.status-paid .dot {
+  background: var(--success);
+}
+
+.status-pending {
+  color: var(--warning);
+  background: color-mix(in srgb, var(--warning) 12%, transparent);
+}
+
+.status-pending .dot {
+  background: var(--warning);
+}
+
+.status-draft {
+  color: var(--draft);
+  background: color-mix(in srgb, var(--draft) 12%, transparent);
+}
+
+.status-draft .dot {
+  background: var(--draft);
+}
+
+/* ─── Empty State ─── */
+
+.empty-state {
+  margin-top: 90px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.empty-state img {
+  width: min(100%, 220px);
+}
+
+.empty-state p {
+  line-height: 1.6;
+}
