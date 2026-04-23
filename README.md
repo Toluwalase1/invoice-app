@@ -241,39 +241,5 @@ The `storage.ts` module provides a clean API (`loadInvoices`, `saveInvoices`, `l
 - Once shown, errors **clear dynamically** as the user corrects each field (no need to re-submit to see progress)
 - **"Save as Draft" bypasses all validation**, allowing users to save incomplete invoices
 
-### 4. Responsive Design (3 Breakpoints)
 
-The app adapts across **four layout tiers**:
 
-| Breakpoint     | Layout                                                         |
-|----------------|----------------------------------------------------------------|
-| Desktop (>1024px)  | Vertical sidebar, 6-column invoice cards, inline detail actions |
-| Tablet (768–1024px) | Horizontal top bar, row-based cards, inline actions             |
-| Mobile (<768px)     | Compact cards, shortened text ("Filter", "New"), fixed bottom action bar, compact item display |
-| Very small (<400px) | Extra-tight spacing for narrow devices                         |
-
-### 5. Theme Persistence
-
-Both the selected theme and all invoice data persist to `localStorage`, surviving page reloads and browser restarts.
-
-### 6. Draft System
-
-Users can save invoices as drafts — these skip all form validation and appear with a "Draft" status pill. They can be edited later and submitted as pending.
-
-### 7. Unique Invoice ID Generation
-
-Each invoice gets a randomly generated 6-character alphanumeric ID (e.g., `XM9141`) — two uppercase letters followed by four digits. This matches the ID format shown in the design.
-
----
-
-## License
-
-This project is for educational / assessment purposes.
-
----
-
-## Author
-
-**Toluwalase Badejo**
-
-Built as part of the HNG internship program. Hire talented developers at [https://hng.tech/hire](https://hng.tech/hire).
